@@ -35,7 +35,7 @@ body{
   background: var(--color-black-light);
 
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: [full-start] 6rem [center-start] 1fr [center-end] 6rem [full-end];
 }
 
 a{
@@ -89,8 +89,13 @@ img{
 
 .section-title{
   grid-column: 1 / -1;
-  font-size: 4rem;
+  font-size: 3.4rem;
   color: var(--color-accent-text);
+}
+
+a:hover{
+  color: var(--color-accent-text);
+  transition: all .25s linear;
 }
 
 

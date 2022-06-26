@@ -1,5 +1,6 @@
 .pricing{
   padding: 4rem 0;
+  grid-column: center-start / center-end;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(31rem,1fr));
@@ -51,6 +52,7 @@
   background-color: var(--color-black);
   padding: 8rem 0;
   text-align: center;
+  grid-column: full-start / full-end;
   
   display: flex;
   flex-direction: column;

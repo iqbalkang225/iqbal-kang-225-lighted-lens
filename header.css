@@ -2,7 +2,7 @@
   height: 100vh;
   position: relative;
 
-  grid-column: 1 / -1;
+  grid-column: 1 / full-end;
 }
 
 .header-div,
@@ -49,8 +49,36 @@
   background: url(./images/hero.jpg) bottom/cover;
 }
 
+.flash-box{
+  height: 100%;
+  width: 100%;
+  animation: flash 1.4s 1s;
+}
+
+@keyframes flash{
+  0%{
+    background: transparent;
+  }
+  
+  25%{
+    background: rgb(179, 179, 179);
+  }
+
+  30%{
+    background: transparent;
+  }
+
+  90%{
+    background: #fff;
+  }
+
+  100%{
+    background: transparent;
+  }
+}
+
 .about{
-  height: calc(100vh - 60vh);
+  min-height: calc(100vh - 60vh);
   padding: calc(1rem + 4vw);
 }
 
@@ -151,3 +179,36 @@
 }
 
 /* Footer Section */
+.footer{
+  grid-column: full-start / full-end;
+  padding: 4rem;
+  text-align: center;
+}
+
+.footer-item{
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+
+
+.footer-text{
+  font-size: 1.2rem;
+}
+
+.accent{
+  color: var(--color-accent-text);
+  font-weight: 600;
+}
+
+.accent-light{
+ font-weight: 600;
+}
+
+@media screen and (min-width:800px){
+  .footer-list{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
