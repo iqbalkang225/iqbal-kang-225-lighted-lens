@@ -1,0 +1,153 @@
+#header{
+  height: 100vh;
+  position: relative;
+
+  grid-column: 1 / -1;
+}
+
+.header-div,
+.about{
+    background: var(--color-accent);
+  }
+
+  .header-div,
+  .header-image{
+    display: none;
+  }
+
+#nav-bar{
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  width: 100%;
+}
+
+.nav-list{
+  display: none;
+}
+
+.nav-icon{
+  color: var(--color-accent-text);
+  font-size: 3rem;
+}
+
+.nav-link{
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all .2s linear;
+}
+
+.nav-item:hover .nav-link{
+  color: var(--color-accent-text-light);
+}
+
+.hero{
+  height: 60vh;
+  background: url(./images/hero.jpg) bottom/cover;
+}
+
+.about{
+  height: calc(100vh - 60vh);
+  padding: calc(1rem + 4vw);
+}
+
+@media  (min-width: 800px){
+  #header{
+    display: grid;
+    grid-template-columns: .5fr 1fr;    
+  }
+
+  .header-div{
+    display: block;
+    order: 1;
+    position: relative;
+  }
+
+  .logo-box,
+  .nav-icon{
+    display: none;
+  }
+
+  .header-div-logo-box{
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    transform: translateY(28%);
+    z-index: 100;
+  }
+
+  .logo-top{
+    font-size: calc(1.6rem + 5vw);
+
+  }
+
+  .header-image{
+    display: block;
+    order: 3;
+    position: relative;
+    background:#131313;
+  }
+
+  /* .header-img{
+    height: 230.133px;
+    object-fit: cover;
+    transform: translateY(-40px);
+  } */
+
+  .header-image-logo-box{
+    position: absolute;
+    top: 0.4rem;
+    right: 18.7%;
+  }
+
+  .logo-bottom{
+    font-size: calc(1.6rem + 4.8vw);
+  }
+
+  #nav-bar{
+    z-index: 100;
+    justify-content: center;
+  }
+
+  .nav-list{
+    display: block;
+    color: var(--color-accent-text);
+    /* grid-column: 1 / -1; */
+
+    display: flex;
+  }
+
+  .nav-item{
+    margin-right: calc(1.2rem + 4.4vw);
+  }
+
+
+  .hero{order:2;}
+  .about{
+    order: 4;
+    /* padding: 6rem; */
+  }
+
+}
+
+@media (min-width: 1200px){
+  .hero{
+    background-position:  0px -190px;
+  }
+
+  .header-image-logo-box{
+    position: absolute;
+    top: -.7rem;
+    right: 19%;
+  }
+
+  .about{
+    line-height: 2.2;
+  }
+
+}
+
+/* Footer Section */

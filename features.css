@@ -1,0 +1,43 @@
+.features{
+  padding: 4rem 0;
+  grid-column: 1 / -1;
+  background-color: #000;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+  gap: 2rem;
+}
+
+.feature{
+  text-align: center;
+  transition: all 0.2s linear;
+  padding: 2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+
+.feature:hover{
+  box-shadow: 0 0.125rem 0 var(--color-accent-text);
+}
+
+.feature:hover .feature-icon{
+  transform: translateY(-.5rem);
+}
+
+.feature-title{
+  font-size: 1.8rem;
+}
+
+.feature-text{
+  max-width: 31rem;
+}
+
+.feature-icon{
+  font-size: 3rem;
+  color: var(--color-accent-text);
+  transition: all 0.2s linear;
+}

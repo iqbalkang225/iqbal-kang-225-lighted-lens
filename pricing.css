@@ -1,0 +1,96 @@
+.pricing{
+  padding: 4rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem,1fr));
+  justify-items: center;
+  column-gap: 2rem;
+  row-gap: 4rem;
+}
+
+.pricing-card{
+  max-width: 30rem;
+  background-color: var(--color-accent);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.pricing-img{
+  height: 25rem;
+  object-fit: cover;
+}
+
+.pricing-info{
+  padding: 2rem;
+  text-align: center;
+}
+
+.pricing-list{
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.pricing-list li{
+  margin-bottom: 1rem;
+}
+
+.pricing-icon{
+  font-size: .8rem;
+  margin-right: 0.5rem;
+  transform: translateY(-0.3rem);
+}
+
+.pricing-btn{
+  padding: .8rem 3rem;
+}
+
+/* Updates Form */
+
+.updates{
+  background-color: var(--color-black);
+  padding: 8rem 0;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  column-gap: 2rem;
+}
+
+.updates-text{
+  font-size: 1.2rem;
+}
+
+.updates-box{
+  flex-basis: 40%;
+}
+
+.updates-form{
+  margin-top: 2rem;
+}
+
+.email-input{
+  padding: .8rem;
+  width: 50%;
+  margin-right: 1rem;
+}
+
+.email-input::placeholder{
+  color: var(--color-accent-text);
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 800px){
+  .updates{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px){
+
+  .updates-form{
+    flex-basis: 50%;
+  }
+}
